@@ -11,7 +11,7 @@ class MyADB:
     def runFridaServer(self,host):
         port = host.split(':')[1]
         run('adb shell su -c chmod +x /data/local/tmp/www',stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-        run('adb shell su -c nohup /data/local/tmp/www -l ' + host + " &",stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-        print("启动frida server")
+        run('adb shell su -c nohup /data/local/tmp/www -l ' + host + " >/dev/null 2>&1 &",stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+        print("启动frida server",end='\n')
         run('adb forward tcp:' + port + ' tcp:'+port,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-        print("tcp端口映射")
+        print("tcp端口映射",end='\n')

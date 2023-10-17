@@ -18,6 +18,7 @@ class MyFrida:
 """
         manager = frida.get_device_manager()
         device= manager.add_remote_device(self.host)
+        print(self.host,end='\n')
         script = device.attach("创高体育").create_script(jscode) #创建js脚本
         script.load() #加载脚本
         sys.stdin.read()
