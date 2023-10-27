@@ -11,3 +11,5 @@
 2. 将frida-server二进制文件放到模拟器的/data/local/tmp目录下，重命名为www
 3. 根据模拟器数量修改main.py中的线程
 4. 运行main.py
+###运行成功截图
+5. ![image](https://github.com/Amorter/HenuRun/assets/63935225/f62ee565-3aca-4a7f-ac2c-a4d496e5ec9e)
