@@ -19,7 +19,11 @@ class Leidian:
 
     def runFridaServer(self,host):
         port = host.split(':')[1]
+<<<<<<< HEAD
         run(self.ld_dir + ' -s ' + str(self.index) + ' chmod +x /data/local/tmp/www"')
+=======
+        run(self.ld_dir + ' -s ' + str(self.index) + " su -c 'chmod +x /data/local/tmp/www'")
+>>>>>>> 3d8c3f761eab934963743603273e18c9cc7fce74
         print("修改权限",end='\n')
         run(self.ld_dir + ' -s ' + str(self.index) + ' nohup /data/local/tmp/www -l ' + host + " >/dev/null 2>&1 &")
         print("启动frida server",end='\n') 
